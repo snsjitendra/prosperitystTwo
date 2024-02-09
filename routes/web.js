@@ -7,7 +7,7 @@ const router = express.Router()
 // FormController
 router.get('/',FormController.index)
 router.post('/store',FormController.store)
-router.post('/index',FormController.index)
+router.post('/indexWithoutBootStrap',FormController.indexWithoutBootStrap)
 
 
 module.exports = router

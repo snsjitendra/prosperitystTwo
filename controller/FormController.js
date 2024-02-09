@@ -6,6 +6,13 @@ class FormController{
             
         }
     }
+    static indexWithoutBootStrap = (req, res) =>{
+        try {
+            res.render('indexWithoutBootStrap')
+        } catch (error) {
+            
+        }
+    }
 
 
     static store = (req,res) =>{

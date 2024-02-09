@@ -7,456 +7,403 @@
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
-        .block {
-            border: 1px solid #000;
-            height: 27px;
-            width: 25px;
-            text-align: center;
-            font-size: 20px;
-            padding-top: 3px;
-        }
-
-        .singleDetailSection {
-            width: 100%;
-            margin-left: auto;
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 5px;
-        }
-
-        .singleDetailSection2 {
-            width: 100%;
-            margin-left: auto;
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 5px;
-        }
-
-        .singleHeadingSectionParent {
-            width: 160px;
-        }
-
-        .singleHeadingSectionParent2 {
-            width: 160px;
-        }
-
-        .singleHeadingSection {
-            white-space: nowrap;
-            float: right;
-        }
-
-        .singleHeadingSection2 {
-            white-space: nowrap;
-            float: right;
-        }
-
-        .singleBlockSection {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .singleBlockSection2 {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 6px;
+        .fs-5 {
+            font-size: 15px !important;
         }
     </style>
 </head>
 
 <body>
- <!-- page-2 -->
-
-    <div style="width: 87%; margin: auto;">
-        <p style="border: 2px solid; font-size: 20px;"><b>4. Contact details</b></p>
-        <p>This is the Investor's address where all correspondence will be sent.</p>
-
-        <!-- contact person section starts -->
-        <div class="singleDetailSection" style="gap: 15px;">
-            <div class="singleHeadingSectionParent">
-                <div class="singleHeadingSection">Contact person</div>
-            </div>
-            <div class="singleBlockSection" id="nameBlocks"></div>
+    <div class="container">
+        <div class="w-100">
+            <div class="border border-dark p-1">4. Contact details</div>
+            <div class="mt-3">This is the Investor's address where all correspondence will be sent.</div>
         </div>
-        <!-- contact person section ends -->
 
-        <!-- unit number and street number section starts -->
-        <div class="singleDetailSection" style="gap: 30px;">
-            <div style="display: flex; align-items: center; gap: 50px;">
-                <div style="display: flex; align-items: center; gap: 15px;">
-                    <div class="singleHeadingSectionParent">
-                        <div class="singleHeadingSection">Unit number</div>
-                    </div>
-                    <div class="singleBlockSection" id="unitBlocks"></div>
-                </div>
-                <div style="display: flex; align-items: center; gap: 15px;">
-                    <div class="singleHeadingSectionParent">
-                        <div class="singleHeadingSection">Street number</div>
-                    </div>
-                    <div class="singleBlockSection" id="streetBlocks"></div>
+        <div class="row mt-2">
+            <div class="col-md-2">
+                <div class="d-flex justify-content-between">
+                    <div>&nbsp;</div>
+                    <div>Contact person</div>
                 </div>
             </div>
-        </div>
-        <!-- unit number and street number section ends -->
-
-        <!-- street name section starts -->
-        <div class="singleDetailSection" style="gap: 15px;">
-            <div class="singleHeadingSectionParent">
-                <div class="singleHeadingSection">Street name</div>
+            <div class="col-md-10">
+                <div class="d-flex flex-wrap align-items-center gap-1" id="nameBlocks"></div>
             </div>
-            <div class="singleBlockSection" id="streetNameBlocks"></div>
         </div>
-        <!-- street name section ends -->
 
-        <!-- Suburb section starts -->
-        <div class="singleDetailSection" style="gap: 15px;">
-            <div class="singleHeadingSectionParent">
-                <div class="singleHeadingSection">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Suburb</div>
-            </div>
-            <div class="singleBlockSection" id="suburbBlocks"></div>
-        </div>
-        <!-- Suburb section ends -->
-
-        <!-- State and Postcode section starts -->
-        <div class="singleDetailSection" style="gap: 30px;">
-            <div style="display: flex; align-items: center; gap: 50px;">
-                <div style="display: flex; align-items: center; gap: 15px;">
-                    <div class="singleHeadingSectionParent">
-                        <div class="singleHeadingSection">State</div>
-                    </div>
-                    <div class="singleBlockSection" id="stateBlocks"></div>
-                </div>
-                <div style="display: flex; align-items: center; gap: 15px;">
-                    <div class="singleHeadingSectionParent">
-                        <div class="singleHeadingSection">Postcode</div>
-                    </div>
-                    <div class="singleBlockSection" id="postcodeBlocks"></div>
+        <div class="row mt-2">
+            <div class="col-md-2">
+                <div class="d-flex justify-content-between">
+                    <div>&nbsp;</div>
+                    <div>Unit number</div>
                 </div>
             </div>
-        </div>
-        <!-- State and Postcode section ends -->
-
-        <!-- Country person section starts -->
-        <div class="singleDetailSection" style="gap: 15px;">
-            <div class="singleHeadingSectionParent">
-                <div class="singleHeadingSection">Country</div>
+            <div class="col-md-3">
+                <div class="d-flex flex-wrap align-items-center gap-1" id="unitBlocks"></div>
             </div>
-            <div class="singleBlockSection" id="countryBlocks"></div>
-        </div>
-        <!-- Country person section ends -->
-
-        <!-- Phone and Phone section starts -->
-        <div class="singleDetailSection2" style="gap: 30px;">
-            <div style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 50px;">
-                <div style="display: flex; align-items: center; gap: 15px;">
-                    <div class="singleHeadingSectionParent2">
-                        <div class="singleHeadingSection2">Phone (after hours)</div>
-                    </div>
-                    <div class="singleBlockSection2" id="phoneaBlocks"></div>
-                </div>
-                <div style="display: flex; align-items: center; gap: 15px;">
-                    <div class="singleHeadingSectionParent2">
-                        <div class="singleHeadingSection2">Phone (business hours)</div>
-                    </div>
-                    <div class="singleBlockSection2" id="phonebBlocks"></div>
+            <div class="col-md-2">
+                <div class="d-flex justify-content-between">
+                    <div>&nbsp;</div>
+                    <div>Street number</div>
                 </div>
             </div>
+            <div class="col-md-5">
+                <div class="d-flex flex-wrap align-items-center gap-1" id="streetBlocks"></div>
+            </div>
         </div>
-        <!-- Phone and Phone section ends -->
 
-        <!-- Mobile and Facsimile section starts -->
-        <div class="singleDetailSection2" style="gap: 30px;">
-            <div style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 50px;">
-                <div style="display: flex; align-items: center; gap: 15px;">
-                    <div class="singleHeadingSectionParent2">
-                        <div class="singleHeadingSection2">Mobile</div>
-                    </div>
-                    <div class="singleBlockSection2" id="mobileBlocks"></div>
+        <div class="row mt-2">
+            <div class="col-md-2">
+                <div class="d-flex justify-content-between">
+                    <div>&nbsp;</div>
+                    <div>Street name</div>
                 </div>
-                <div style="display: flex; align-items: center; gap: 15px;">
-                    <div class="singleHeadingSectionParent2">
-                        <div class="singleHeadingSection2">Facsimile</div>
+            </div>
+            <div class="col-md-10">
+                <div class="d-flex flex-wrap align-items-center gap-1" id="streetNameBlocks"></div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2">
+                <div class="d-flex justify-content-between">
+                    <div>&nbsp;</div>
+                    <div>Suburb</div>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div class="d-flex flex-wrap align-items-center gap-1" id="suburbBlocks"></div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2">
+                <div class="d-flex justify-content-between">
+                    <div>&nbsp;</div>
+                    <div>State</div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="d-flex flex-wrap align-items-center gap-1" id="stateBlocks"></div>
+            </div>
+            <div class="col-md-2">
+                <div class="d-flex justify-content-between">
+                    <div>&nbsp;</div>
+                    <div>Postcode</div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="d-flex flex-wrap align-items-center gap-1" id="postcodeBlocks"></div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2">
+                <div class="d-flex justify-content-between">
+                    <div>&nbsp;</div>
+                    <div>Country</div>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div class="d-flex flex-wrap align-items-center gap-1" id="countryBlocks"></div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2">
+                <div class="d-flex justify-content-between">
+                    <div>&nbsp;</div>
+                    <div>Phone (after hours)</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="d-flex flex-wrap align-items-center gap-1" id="phoneaBlocks"></div>
+            </div>
+            <div class="col-md-2">
+                <div class="d-flex justify-content-between">
+                    <div>Phone (business hours)</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="d-flex flex-wrap align-items-center gap-1" style="float: right;" id="phonebBlocks"></div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2">
+                <div class="d-flex justify-content-between">
+                    <div>&nbsp;</div>
+                    <div>Mobile</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="d-flex flex-wrap align-items-center gap-1" id="mobileBlocks"></div>
+            </div>
+            <div class="col-md-2">
+                <div class="d-flex justify-content-between">
+                    <div>Facsmile</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="d-flex flex-wrap align-items-center gap-1" style="float: right;" id="facsimileBlocks"></div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2">
+                <div class="d-flex justify-content-between">
+                    <div>&nbsp;</div>
+                    <div>Email</div>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div class="d-flex flex-wrap align-items-center gap-1" id="emailBlocks"></div>
+            </div>
+        </div>
+
+        <div class="w-100 mt-3">
+            <div class="border border-dark p-1">5. Personal attributes</div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2"></div>
+            <div class="col-md-10">
+                <div>In relation to our Design and Distribution Obligations (DDO) under the Corporations Act, a Target Market Determination (TMD)
+                    has been made available at https://vascofm.com. You should read and carefully consider the TMD before investing.</div>
+                <div>We will review the responses to the questions set out below and consider those answers against the Fund’s key attributes set out
+                    in the TMD, and assess whether we consider it is likely you are within the target market and whether the Fund would likely be
+                    consistent with your likely objectives, financial situation and needs</div>
+                <div>We may seek further information from you and reserve the right to reject an application if we consider you are not within the
+                    target market.</div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2">
+                <div class="d-flex justify-content-between">
+                    <div>&nbsp;</div>
+                    <div class="text-info fw-bold fs-5">Personal Advice</div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div>Have you received personal financial product advice in relation to this investment?</div>
+            </div>
+            <div class="col-md-3">
+                <div class="d-flex align-items-center gap-2">
+                    <div>
+                        <input type="checkbox"> Yes
                     </div>
-                    <div class="singleBlockSection2" id="facsimileBlocks"></div>
+                    <div>
+                        <input type="checkbox"> No
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- Mobile and Facsimile section ends -->
 
-        <!-- Email person section starts -->
-        <div class="singleDetailSection" style="gap: 15px;">
-            <div class="singleHeadingSectionParent">
-                <div class="singleHeadingSection">Email</div>
+        <div class="row mt-2">
+            <div class="col-md-2"></div>
+            <div class="col-md-10">
+                <div><span class="fw-bold">Explanation:</span> You have received advice from a licensed financial adviser who has considered either your objectives, financial
+                    situation or needs in providing the advice.</div>
+                <div><span class="fw-bold">Note:</span> : If you answer ‘Yes’, please provide further detail below. You do not need to complete the remainder of this questionnaire.</div>
             </div>
-            <div class="singleBlockSection" id="emailBlocks"></div>
         </div>
-        <!-- Email person section ends -->
+
+        <div class="row mt-2">
+            <div class="col-md-2">
+                <div class="d-flex justify-content-between">
+                    <div>&nbsp;</div>
+                    <div class="text-info fw-bold fs-5">Adviser name</div>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div class="d-flex flex-wrap align-items-center gap-1" id="advisernameBlocks"></div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2">
+                <div class="d-flex justify-content-between">
+                    <div>&nbsp;</div>
+                    <div class="text-info fw-bold fs-5">Adviser company</div>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div class="d-flex flex-wrap align-items-center gap-1" id="advisercompanyBlocks"></div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2">
+                <div class="d-flex justify-content-between">
+                    <div>&nbsp;</div>
+                    <div class="text-info fw-bold fs-5">Adviser email or phone contact</div>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div class="d-flex flex-wrap align-items-center gap-1" id="adviseremailBlocks"></div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2">
+                <div class="d-flex justify-content-between">
+                    <div>&nbsp;</div>
+                    <div class="text-info fw-bold fs-5">AFS Licence name (if known)</div>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div class="d-flex flex-wrap align-items-center gap-1" id="afslicenceBlocks"></div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2">
+                <div class="d-flex justify-content-between">
+                    <div>&nbsp;</div>
+                    <div class="text-info fw-bold fs-5">AFS Licence number</div>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div class="d-flex flex-wrap align-items-center gap-1" id="afslicencenumberBlocks"></div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2">
+                <div class="d-flex justify-content-between">
+                    <div>&nbsp;</div>
+                    <div class="text-info fw-bold fs-5">Investment Objective</div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div>Do you seek Capital Growth from your Investment?</div>
+            </div>
+            <div class="col-md-5">
+                <div class="d-flex align-items-center gap-2">
+                    <div>
+                        <input type="checkbox"> Yes
+                    </div>
+                    <div>
+                        <input type="checkbox"> No
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2"></div>
+            <div class="col-md-5">
+                <div>Do you accept your capital is not guaranteed?</div>
+            </div>
+            <div class="col-md-5">
+                <div class="d-flex align-items-center gap-2">
+                    <div>
+                        <input type="checkbox"> Yes
+                    </div>
+                    <div>
+                        <input type="checkbox"> No
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2"></div>
+            <div class="col-md-10">
+                <div><span class="fw-bold">Note:</span> An investment in the Fund is not capital guaranteed. If you selected ‘No’, then this product is not suitable for
+                    you.</div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2"></div>
+            <div class="col-md-5">
+                <div>The Fund will not provide income distribution. Do you accept this?</div>
+            </div>
+            <div class="col-md-5">
+                <div class="d-flex align-items-center gap-2">
+                    <div>
+                        <input type="checkbox"> Yes
+                    </div>
+                    <div>
+                        <input type="checkbox"> No
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2"></div>
+            <div class="col-md-10">
+                <div><span class="fw-bold">Note:</span> If you selected ‘No’, then this product is not suitable for you.</div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2">
+                <div class="d-flex justify-content-between">
+                    <div>&nbsp;</div>
+                    <div class="text-info fw-bold fs-5">Asset Allocation</div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div>Will this investment represent 10% or less of your total investable assets?</div>
+            </div>
+            <div class="col-md-5">
+                <div class="d-flex align-items-center gap-2">
+                    <div>
+                        <input type="checkbox"> Yes
+                    </div>
+                    <div>
+                        <input type="checkbox"> No
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2"></div>
+            <div class="col-md-10">
+                <div><span class="fw-bold">Note:</span> An investment in the Fund is only suitable for use as a satellite/small allocation (i.e., up to 10% of your assets available for
+                    investment excluding your residential home). If you selected ‘No’, then this product is not suitable for you.</div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2">
+                <div class="d-flex justify-content-between">
+                    <div>&nbsp;</div>
+                    <div class="text-info fw-bold fs-5">Minimum Investment Time Frame</div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div>The suggested minimum investment timeframe for this Fund is 3 years. Do you accept this?</div>
+            </div>
+            <div class="col-md-2">
+                <div class="d-flex align-items-center gap-2">
+                    <div>
+                        <input type="checkbox"> Yes
+                    </div>
+                    <div>
+                        <input type="checkbox"> No
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2"></div>
+            <div class="col-md-10">
+                <div><span class="fw-bold">Note:</span> The Fund is considered high to very high risk which means returns (positive or negative) may fluctuate significantly from
+                    year-to-year. Therefore, the suggested minimum investment timeframe for this Fund is 3 years. If you selected “No”, then this
+                    product may not be suitable for you.</div>
+            </div>
+        </div>
     </div>
-
-    <div>
-        <div style="width: 87%; margin: auto;">
-            <p style="border: 2px solid; font-size: 20px;"><b>5. Personal attributes</b></p>
-            <div style="padding-left: 14%;">
-                    <p style="margin-left: 13px;">In relation to our Design and Distribution Obligations (DDO) under the Corporations Act, a Target Market Determination (TMD)
-                        has been made available at <a href="https://vascofm.com" style="text-decoration: none;">https://vascofm.com</a>. You should read and carefully consider the TMD before investing.</p>
-                    <p style="margin-left: 13px;">We will review the responses to the questions set out below and consider those answers against the Fund’s key attributes set out
-                            in the TMD, and assess whether we consider it is likely you are within the target market and whether the Fund would likely be
-                            consistent with your likely objectives, financial situation and needs.</p>
-                    <p style="margin-left: 13px;">We may seek further information from you and reserve the right to reject an application if we consider you are not within the
-                        target market.</p>
-            </div>
-        </div>
-
-        <!--Personal Advice section starts -->
-        <div style="width: 87%; margin: auto;">
-            <div class="singleDetailSection" style="gap: 30px;">
-                <div style="display: flex; align-items: center; gap: 0px;">
-                    <div style="display: flex; align-items: center; gap: 15px;">
-                        <div class="singleHeadingSectionParent">
-                            <div class="singleHeadingSection">Personal Advice</div>
-                        </div>
-                        <div class="singleBlockSection" id=""></div>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 15px;">
-                        <div class="singleHeadingSection">Have you received personal financial product advice in relation to this investment?
-                            <label>
-                                <input type="checkbox" name="personalAdvice" value="yes"> Yes
-                            </label>
-                            <label>
-                                <input type="checkbox" name="personalAdvice" value="no"> No
-                            </label>
-                        </div>
-                        <div class="singleBlockSection" id=""></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--Personal Advice section ends -->
-
-        <div style="width: 87%; margin: auto;">
-            <div style="padding-left: 14%;">
-                    <p style="margin-left: 13px;"><b>Explanation:</b> You have received advice from a licensed financial adviser who has considered either your objectives, financial
-                        situation or needs in providing the advice.</p>
-                    <p style="margin-left: 13px;"><b>Note:</b> If you answer ‘Yes’, please provide further detail below. You do not need to complete the remainder of this questionnaire.</p>
-            </div>
-        </div>
-        
-        <div style="width: 87%; margin: auto;">
-            <!-- Adviser name section starts -->
-            <div class="singleDetailSection" style="gap: 15px;">
-                <div class="singleHeadingSectionParent">
-                    <div class="singleHeadingSection" style="white-space: wrap;">Adviser name</div>
-                </div>
-                <div class="singleBlockSection" id="advisernameBlocks"></div>
-            </div>
-            <!-- Adviser name section ends -->
-            
-            <!-- Adviser company section starts -->
-            <div class="singleDetailSection" style="gap: 15px;">
-                <div class="singleHeadingSectionParent">
-                    <div class="singleHeadingSection" style="white-space: wrap;">Adviser company</div>
-                </div>
-                <div class="singleBlockSection" id="advisercompanyBlocks"></div>
-            </div>
-            <!-- Adviser company section ends -->
-            
-            <!-- Adviser email or phone contact section starts -->
-            <div class="singleDetailSection" style="gap: 15px;">
-                <div class="singleHeadingSectionParent">
-                    <div class="singleHeadingSection" style="white-space: wrap;">Adviser email or phone contact</div>
-                </div>
-                <div class="singleBlockSection" id="adviseremailBlocks"></div>
-            </div>
-            <!-- Adviser email or phone contact section ends -->
-            
-            <!-- AFS Licence name (if known) section starts -->
-            <div class="singleDetailSection" style="gap: 15px;">
-                <div class="singleHeadingSectionParent">
-                    <div class="singleHeadingSection" style="white-space: wrap;">AFS Licence name (if known)</div>
-                </div>
-                <div class="singleBlockSection" id="afslicenceBlocks"></div>
-            </div>
-            <!-- AFS Licence name (if known) section ends -->
-            
-            <!-- AFS Licence number section starts -->
-            <div class="singleDetailSection" style="gap: 15px;">
-                <div class="singleHeadingSectionParent">
-                    <div class="singleHeadingSection" style="white-space: wrap;">AFS Licence number</div>
-                </div>
-                <div class="singleBlockSection" id="afslicencenumberBlocks"></div>
-            </div>
-            <!-- AFS Licence number section ends -->
-        </div>
-
-        <!--Investment Objective section starts -->
-        <div style="width: 87%; margin: auto;">
-            <div class="singleDetailSection" style="gap: 30px;">
-                <div style="display: flex; align-items: center; gap: 0px;">
-                    <div style="display: flex; align-items: center; gap: 15px;">
-                        <div class="singleHeadingSectionParent">
-                            <div class="singleHeadingSection">Investment Objective</div>
-                        </div>
-                        <div class="singleBlockSection" id=""></div>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 15px;">
-                        <div class="singleHeadingSection">Do you seek Capital Growth from your Investment?
-                            <label>
-                                <input type="checkbox" name="personalAdvice" value="yes"> Yes
-                            </label>
-                            <label>
-                                <input type="checkbox" name="personalAdvice" value="no"> No
-                            </label>
-                        </div>
-                        <div class="singleBlockSection" id=""></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-       
-        <div style="width: 87%; margin: auto;">
-            <div style="padding-left: 14%;">
-                    <p>&nbsp;&nbsp;&nbsp;Do you accept your capital is not guaranteed?
-                        <label>
-                            <input type="checkbox" name="personalAdvice" value="yes"> Yes
-                        </label>
-                        <label>
-                            <input type="checkbox" name="personalAdvice" value="no"> No
-                        </label>
-                    </p>
-                    <p>&nbsp;&nbsp;&nbsp;<b>Note:</b> An investment in the Fund is not capital guaranteed. If you selected ‘No’, then this product is not suitable for
-                        you.</p>
-                    <p>&nbsp;&nbsp;&nbsp;The Fund will not provide income distribution. Do you accept this?
-                        <label>
-                            <input type="checkbox" name="personalAdvice" value="yes"> Yes
-                        </label>
-                        <label>
-                            <input type="checkbox" name="personalAdvice" value="no"> No
-                        </label>
-                    </p>
-                    <p>&nbsp;&nbsp;&nbsp;<b>Note:</b> If you selected ‘No’, then this product is not suitable for you.</p>
-            </div>
-        </div>
-        <!--Investment Objective section ends -->
-
-        <!--Asset Allocation section starts -->
-        <div style="width: 87%; margin: auto;">
-            <div class="singleDetailSection" style="gap: 30px;">
-                <div style="display: flex; align-items: center; gap: 0px;">
-                    <div style="display: flex; align-items: center; gap: 15px;">
-                        <div class="singleHeadingSectionParent">
-                            <div class="singleHeadingSection">Asset Allocation</div>
-                        </div>
-                        <div class="singleBlockSection" id=""></div>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 15px;">
-                        <div class="singleHeadingSection">Will this investment represent 10% or less of your total investable assets?
-                            <label>
-                                <input type="checkbox" name="personalAdvice" value="yes"> Yes
-                            </label>
-                            <label>
-                                <input type="checkbox" name="personalAdvice" value="no"> No
-                            </label>
-                        </div>
-                        <div class="singleBlockSection" id=""></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-       
-        <div style="width: 87%; margin: auto;">
-            <div style="padding-left: 14%;">
-                    <p style="margin-left: 13px;"><b>Note:</b> An investment in the Fund is only suitable for use as a satellite/small allocation (i.e., up to 10% of your assets available for
-                        investment excluding your residential home). If you selected ‘No’, then this product is not suitable for you.</p>
-            </div>
-        </div>
-        <!--Asset Allocation section ends -->
-
-        <!--Minimum Investment Time Frame section starts -->
-        <div style="width: 87%; margin: auto;">
-            <div class="singleDetailSection" style="gap: 30px;">
-                <div style="display: flex; align-items: center; gap: 0px;">
-                    <div style="display: flex; align-items: center; gap: 15px;">
-                        <div class="singleHeadingSectionParent">
-                            <div class="singleHeadingSection">Minimum Investment <br>Time Frame</div>
-                        </div>
-                        <div class="singleBlockSection" id=""></div>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 15px;">
-                        <div class="singleHeadingSection">The suggested minimum investment timeframe for this Fund is 3 years. Do you accept this?
-                            <label>
-                                <input type="checkbox" name="personalAdvice" value="yes"> Yes
-                            </label>
-                            <label>
-                                <input type="checkbox" name="personalAdvice" value="no"> No
-                            </label>
-                        </div>
-                        <div class="singleBlockSection" id=""></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-       
-        <div style="width: 87%; margin: auto;">
-            <div style="padding-left: 14%;">
-                    <p style="margin-left: 13px;"><b>Note:</b> The Fund is considered high to very high risk which means returns (positive or negative) may fluctuate significantly from
-                        year-to-year. Therefore, the suggested minimum investment timeframe for this Fund is 3 years. If you selected “No”, then this
-                        product may not be suitable for you.</p>
-            </div>
-        </div>
-        <!--Minimum Investment Time Frame section ends -->
-    </div>
-
-    <!-- PAGE-3 -->
-
-    <!-- personal attributes section start -->
-    <div style="width: 87%; margin: auto;">
-        <div class="singleDetailSection" style="gap: 30px; margin-bottom: 10px;">
-            <div style="display: flex; align-items: flex-start; gap: 0px;">
-                <div style="display: flex; align-items: flex-start; gap: 15px;">
-                    <div class="singleHeadingSectionParent">
-                        <div class="singleHeadingSection">Risk Profile</div>
-                    </div>
-                    <div class="singleBlockSection" id=""></div>
-                </div>
-                <div style="display: flex; align-items: flex-start; gap: 15px;">
-                    <div class="singleHeadingSection" style="white-space: wrap;">Explanation - : The following question will assist us in determining your risk profile. In this context “growth assets” include assets
-                        such as shares, property, and alternative investments. Defensive assets may include cash or fixed income investments.
-                        What is your risk appetite?
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="singleDetailSection" style="gap: 30px;">
-            <div style="display: flex; align-items: center; gap: 0px;">
-                <div style="display: flex; align-items: center; gap: 15px;">
-                    <div class="singleHeadingSectionParent">
-                        <div class="singleHeadingSection">&nbsp;</div>
-                    </div>
-                    <div class="singleBlockSection" id=""></div>
-                </div>
-                <div style="display: flex; align-items: flex-start; gap: 15px;">
-                    <div class="singleHeadingSection" style="white-space: wrap;">Very High - I am an aggressive investor seeking to achieve returns significantly higher than the
-                        market average and as a result accept this means returns may be volatile with a higher potential that
-                        I may experience the loss of some or all my capital. I have a tolerance for sustained losses. My typical
-                        preference is for growth assets only
-                    </div>
-                    <div style="width: 250px;">
-                        <label>
-                            <input type="checkbox" name="personalAdvice" value="yes"> Yes
-                        </label>
-                        <label>
-                            <input type="checkbox" name="personalAdvice" value="no"> No
-                        </label>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- personal attributes section start -->
-    
 
     <script>
         $(document).ready(function () {
@@ -645,7 +592,7 @@
             function fillBlocks(data, blocksContainer, maxBlocks) {
                 for (var i = 0; i < maxBlocks; i++) {
                     var character = i < data.length ? data[i] : '';
-                    var block = $('<div class="block"></div>').text(character);
+                    var block = $('<div style="height: 35px; width: 27px;" class="fs-5 border border-dark d-flex align-items-center justify-content-center"></div>').text(character);
                     blocksContainer.append(block);
                 }
             }
