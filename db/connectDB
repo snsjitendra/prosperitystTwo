@@ -1,0 +1,14 @@
+const mongoose = require('mongoose')
+const url = 'mongodb://0.0.0.0:27017/prosperitystDB'
+
+const connectDB= () => {
+
+    return mongoose.connect(url)
+    .then(()=>{
+        console.log("Connection Succesfully !")
+    }).catch((err)=>{
+        console.log(err)
+    })
+}
+
+module.exports = connectDB

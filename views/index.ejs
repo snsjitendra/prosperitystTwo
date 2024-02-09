@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        .block {
+            border: 1px solid #000;
+            height: 27px;
+            width: 25px;
+            text-align: center;
+            font-size: 20px;
+            padding-top: 3px;
+        }
+
+        .singleDetailSection {
+            width: 100%;
+            margin-left: auto;
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 5px;
+        }
+
+        .singleDetailSection2 {
+            width: 100%;
+            margin-left: auto;
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 5px;
+        }
+
+        .singleHeadingSectionParent {
+            width: 160px;
+        }
+
+        .singleHeadingSectionParent2 {
+            width: 160px;
+        }
+
+        .singleHeadingSection {
+            white-space: nowrap;
+            float: right;
+        }
+
+        .singleHeadingSection2 {
+            white-space: nowrap;
+            float: right;
+        }
+
+        .singleBlockSection {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .singleBlockSection2 {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 6px;
+        }
+    </style>
+</head>
+
+<body>
+ <!-- page-2 -->
+
+    <div style="width: 87%; margin: auto;">
+        <p style="border: 2px solid; font-size: 20px;"><b>4. Contact details</b></p>
+        <p>This is the Investor's address where all correspondence will be sent.</p>
+
+        <!-- contact person section starts -->
+        <div class="singleDetailSection" style="gap: 15px;">
+            <div class="singleHeadingSectionParent">
+                <div class="singleHeadingSection">Contact person</div>
+            </div>
+            <div class="singleBlockSection" id="nameBlocks"></div>
+        </div>
+        <!-- contact person section ends -->
+
+        <!-- unit number and street number section starts -->
+        <div class="singleDetailSection" style="gap: 30px;">
+            <div style="display: flex; align-items: center; gap: 50px;">
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <div class="singleHeadingSectionParent">
+                        <div class="singleHeadingSection">Unit number</div>
+                    </div>
+                    <div class="singleBlockSection" id="unitBlocks"></div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <div class="singleHeadingSectionParent">
+                        <div class="singleHeadingSection">Street number</div>
+                    </div>
+                    <div class="singleBlockSection" id="streetBlocks"></div>
+                </div>
+            </div>
+        </div>
+        <!-- unit number and street number section ends -->
+
+        <!-- street name section starts -->
+        <div class="singleDetailSection" style="gap: 15px;">
+            <div class="singleHeadingSectionParent">
+                <div class="singleHeadingSection">Street name</div>
+            </div>
+            <div class="singleBlockSection" id="streetNameBlocks"></div>
+        </div>
+        <!-- street name section ends -->
+
+        <!-- Suburb section starts -->
+        <div class="singleDetailSection" style="gap: 15px;">
+            <div class="singleHeadingSectionParent">
+                <div class="singleHeadingSection">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Suburb</div>
+            </div>
+            <div class="singleBlockSection" id="suburbBlocks"></div>
+        </div>
+        <!-- Suburb section ends -->
+
+        <!-- State and Postcode section starts -->
+        <div class="singleDetailSection" style="gap: 30px;">
+            <div style="display: flex; align-items: center; gap: 50px;">
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <div class="singleHeadingSectionParent">
+                        <div class="singleHeadingSection">State</div>
+                    </div>
+                    <div class="singleBlockSection" id="stateBlocks"></div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <div class="singleHeadingSectionParent">
+                        <div class="singleHeadingSection">Postcode</div>
+                    </div>
+                    <div class="singleBlockSection" id="postcodeBlocks"></div>
+                </div>
+            </div>
+        </div>
+        <!-- State and Postcode section ends -->
+
+        <!-- Country person section starts -->
+        <div class="singleDetailSection" style="gap: 15px;">
+            <div class="singleHeadingSectionParent">
+                <div class="singleHeadingSection">Country</div>
+            </div>
+            <div class="singleBlockSection" id="countryBlocks"></div>
+        </div>
+        <!-- Country person section ends -->
+
+        <!-- Phone and Phone section starts -->
+        <div class="singleDetailSection2" style="gap: 30px;">
+            <div style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 50px;">
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <div class="singleHeadingSectionParent2">
+                        <div class="singleHeadingSection2">Phone (after hours)</div>
+                    </div>
+                    <div class="singleBlockSection2" id="phoneaBlocks"></div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <div class="singleHeadingSectionParent2">
+                        <div class="singleHeadingSection2">Phone (business hours)</div>
+                    </div>
+                    <div class="singleBlockSection2" id="phonebBlocks"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Phone and Phone section ends -->
+
+        <!-- Mobile and Facsimile section starts -->
+        <div class="singleDetailSection2" style="gap: 30px;">
+            <div style="width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 50px;">
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <div class="singleHeadingSectionParent2">
+                        <div class="singleHeadingSection2">Mobile</div>
+                    </div>
+                    <div class="singleBlockSection2" id="mobileBlocks"></div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <div class="singleHeadingSectionParent2">
+                        <div class="singleHeadingSection2">Facsimile</div>
+                    </div>
+                    <div class="singleBlockSection2" id="facsimileBlocks"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile and Facsimile section ends -->
+
+        <!-- Email person section starts -->
+        <div class="singleDetailSection" style="gap: 15px;">
+            <div class="singleHeadingSectionParent">
+                <div class="singleHeadingSection">Email</div>
+            </div>
+            <div class="singleBlockSection" id="emailBlocks"></div>
+        </div>
+        <!-- Email person section ends -->
+    </div>
+
+    <div>
+        <div style="width: 87%; margin: auto;">
+            <p style="border: 2px solid; font-size: 20px;"><b>5. Personal attributes</b></p>
+            <div style="padding-left: 14%;">
+                    <p style="margin-left: 13px;">In relation to our Design and Distribution Obligations (DDO) under the Corporations Act, a Target Market Determination (TMD)
+                        has been made available at <a href="https://vascofm.com" style="text-decoration: none;">https://vascofm.com</a>. You should read and carefully consider the TMD before investing.</p>
+                    <p style="margin-left: 13px;">We will review the responses to the questions set out below and consider those answers against the Fund’s key attributes set out
+                            in the TMD, and assess whether we consider it is likely you are within the target market and whether the Fund would likely be
+                            consistent with your likely objectives, financial situation and needs.</p>
+                    <p style="margin-left: 13px;">We may seek further information from you and reserve the right to reject an application if we consider you are not within the
+                        target market.</p>
+            </div>
+        </div>
+
+        <!--Personal Advice section starts -->
+        <div style="width: 87%; margin: auto;">
+            <div class="singleDetailSection" style="gap: 30px;">
+                <div style="display: flex; align-items: center; gap: 0px;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <div class="singleHeadingSectionParent">
+                            <div class="singleHeadingSection">Personal Advice</div>
+                        </div>
+                        <div class="singleBlockSection" id=""></div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <div class="singleHeadingSection">Have you received personal financial product advice in relation to this investment?
+                            <label>
+                                <input type="checkbox" name="personalAdvice" value="yes"> Yes
+                            </label>
+                            <label>
+                                <input type="checkbox" name="personalAdvice" value="no"> No
+                            </label>
+                        </div>
+                        <div class="singleBlockSection" id=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Personal Advice section ends -->
+
+        <div style="width: 87%; margin: auto;">
+            <div style="padding-left: 14%;">
+                    <p style="margin-left: 13px;"><b>Explanation:</b> You have received advice from a licensed financial adviser who has considered either your objectives, financial
+                        situation or needs in providing the advice.</p>
+                    <p style="margin-left: 13px;"><b>Note:</b> If you answer ‘Yes’, please provide further detail below. You do not need to complete the remainder of this questionnaire.</p>
+            </div>
+        </div>
+        
+        <div style="width: 87%; margin: auto;">
+            <!-- Adviser name section starts -->
+            <div class="singleDetailSection" style="gap: 15px;">
+                <div class="singleHeadingSectionParent">
+                    <div class="singleHeadingSection" style="white-space: wrap;">Adviser name</div>
+                </div>
+                <div class="singleBlockSection" id="advisernameBlocks"></div>
+            </div>
+            <!-- Adviser name section ends -->
+            
+            <!-- Adviser company section starts -->
+            <div class="singleDetailSection" style="gap: 15px;">
+                <div class="singleHeadingSectionParent">
+                    <div class="singleHeadingSection" style="white-space: wrap;">Adviser company</div>
+                </div>
+                <div class="singleBlockSection" id="advisercompanyBlocks"></div>
+            </div>
+            <!-- Adviser company section ends -->
+            
+            <!-- Adviser email or phone contact section starts -->
+            <div class="singleDetailSection" style="gap: 15px;">
+                <div class="singleHeadingSectionParent">
+                    <div class="singleHeadingSection" style="white-space: wrap;">Adviser email or phone contact</div>
+                </div>
+                <div class="singleBlockSection" id="adviseremailBlocks"></div>
+            </div>
+            <!-- Adviser email or phone contact section ends -->
+            
+            <!-- AFS Licence name (if known) section starts -->
+            <div class="singleDetailSection" style="gap: 15px;">
+                <div class="singleHeadingSectionParent">
+                    <div class="singleHeadingSection" style="white-space: wrap;">AFS Licence name (if known)</div>
+                </div>
+                <div class="singleBlockSection" id="afslicenceBlocks"></div>
+            </div>
+            <!-- AFS Licence name (if known) section ends -->
+            
+            <!-- AFS Licence number section starts -->
+            <div class="singleDetailSection" style="gap: 15px;">
+                <div class="singleHeadingSectionParent">
+                    <div class="singleHeadingSection" style="white-space: wrap;">AFS Licence number</div>
+                </div>
+                <div class="singleBlockSection" id="afslicencenumberBlocks"></div>
+            </div>
+            <!-- AFS Licence number section ends -->
+        </div>
+
+        <!--Investment Objective section starts -->
+        <div style="width: 87%; margin: auto;">
+            <div class="singleDetailSection" style="gap: 30px;">
+                <div style="display: flex; align-items: center; gap: 0px;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <div class="singleHeadingSectionParent">
+                            <div class="singleHeadingSection">Investment Objective</div>
+                        </div>
+                        <div class="singleBlockSection" id=""></div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <div class="singleHeadingSection">Do you seek Capital Growth from your Investment?
+                            <label>
+                                <input type="checkbox" name="personalAdvice" value="yes"> Yes
+                            </label>
+                            <label>
+                                <input type="checkbox" name="personalAdvice" value="no"> No
+                            </label>
+                        </div>
+                        <div class="singleBlockSection" id=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <div style="width: 87%; margin: auto;">
+            <div style="padding-left: 14%;">
+                    <p>&nbsp;&nbsp;&nbsp;Do you accept your capital is not guaranteed?
+                        <label>
+                            <input type="checkbox" name="personalAdvice" value="yes"> Yes
+                        </label>
+                        <label>
+                            <input type="checkbox" name="personalAdvice" value="no"> No
+                        </label>
+                    </p>
+                    <p>&nbsp;&nbsp;&nbsp;<b>Note:</b> An investment in the Fund is not capital guaranteed. If you selected ‘No’, then this product is not suitable for
+                        you.</p>
+                    <p>&nbsp;&nbsp;&nbsp;The Fund will not provide income distribution. Do you accept this?
+                        <label>
+                            <input type="checkbox" name="personalAdvice" value="yes"> Yes
+                        </label>
+                        <label>
+                            <input type="checkbox" name="personalAdvice" value="no"> No
+                        </label>
+                    </p>
+                    <p>&nbsp;&nbsp;&nbsp;<b>Note:</b> If you selected ‘No’, then this product is not suitable for you.</p>
+            </div>
+        </div>
+        <!--Investment Objective section ends -->
+
+        <!--Asset Allocation section starts -->
+        <div style="width: 87%; margin: auto;">
+            <div class="singleDetailSection" style="gap: 30px;">
+                <div style="display: flex; align-items: center; gap: 0px;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <div class="singleHeadingSectionParent">
+                            <div class="singleHeadingSection">Asset Allocation</div>
+                        </div>
+                        <div class="singleBlockSection" id=""></div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <div class="singleHeadingSection">Will this investment represent 10% or less of your total investable assets?
+                            <label>
+                                <input type="checkbox" name="personalAdvice" value="yes"> Yes
+                            </label>
+                            <label>
+                                <input type="checkbox" name="personalAdvice" value="no"> No
+                            </label>
+                        </div>
+                        <div class="singleBlockSection" id=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <div style="width: 87%; margin: auto;">
+            <div style="padding-left: 14%;">
+                    <p style="margin-left: 13px;"><b>Note:</b> An investment in the Fund is only suitable for use as a satellite/small allocation (i.e., up to 10% of your assets available for
+                        investment excluding your residential home). If you selected ‘No’, then this product is not suitable for you.</p>
+            </div>
+        </div>
+        <!--Asset Allocation section ends -->
+
+        <!--Minimum Investment Time Frame section starts -->
+        <div style="width: 87%; margin: auto;">
+            <div class="singleDetailSection" style="gap: 30px;">
+                <div style="display: flex; align-items: center; gap: 0px;">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <div class="singleHeadingSectionParent">
+                            <div class="singleHeadingSection">Minimum Investment <br>Time Frame</div>
+                        </div>
+                        <div class="singleBlockSection" id=""></div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <div class="singleHeadingSection">The suggested minimum investment timeframe for this Fund is 3 years. Do you accept this?
+                            <label>
+                                <input type="checkbox" name="personalAdvice" value="yes"> Yes
+                            </label>
+                            <label>
+                                <input type="checkbox" name="personalAdvice" value="no"> No
+                            </label>
+                        </div>
+                        <div class="singleBlockSection" id=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <div style="width: 87%; margin: auto;">
+            <div style="padding-left: 14%;">
+                    <p style="margin-left: 13px;"><b>Note:</b> The Fund is considered high to very high risk which means returns (positive or negative) may fluctuate significantly from
+                        year-to-year. Therefore, the suggested minimum investment timeframe for this Fund is 3 years. If you selected “No”, then this
+                        product may not be suitable for you.</p>
+            </div>
+        </div>
+        <!--Minimum Investment Time Frame section ends -->
+    </div>
+
+    <!-- PAGE-3 -->
+
+    <!-- personal attributes section start -->
+    <div style="width: 87%; margin: auto;">
+        <div class="singleDetailSection" style="gap: 30px; margin-bottom: 10px;">
+            <div style="display: flex; align-items: flex-start; gap: 0px;">
+                <div style="display: flex; align-items: flex-start; gap: 15px;">
+                    <div class="singleHeadingSectionParent">
+                        <div class="singleHeadingSection">Risk Profile</div>
+                    </div>
+                    <div class="singleBlockSection" id=""></div>
+                </div>
+                <div style="display: flex; align-items: flex-start; gap: 15px;">
+                    <div class="singleHeadingSection" style="white-space: wrap;">Explanation - : The following question will assist us in determining your risk profile. In this context “growth assets” include assets
+                        such as shares, property, and alternative investments. Defensive assets may include cash or fixed income investments.
+                        What is your risk appetite?
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="singleDetailSection" style="gap: 30px;">
+            <div style="display: flex; align-items: center; gap: 0px;">
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <div class="singleHeadingSectionParent">
+                        <div class="singleHeadingSection">&nbsp;</div>
+                    </div>
+                    <div class="singleBlockSection" id=""></div>
+                </div>
+                <div style="display: flex; align-items: flex-start; gap: 15px;">
+                    <div class="singleHeadingSection" style="white-space: wrap;">Very High - I am an aggressive investor seeking to achieve returns significantly higher than the
+                        market average and as a result accept this means returns may be volatile with a higher potential that
+                        I may experience the loss of some or all my capital. I have a tolerance for sustained losses. My typical
+                        preference is for growth assets only
+                    </div>
+                    <div style="width: 250px;">
+                        <label>
+                            <input type="checkbox" name="personalAdvice" value="yes"> Yes
+                        </label>
+                        <label>
+                            <input type="checkbox" name="personalAdvice" value="no"> No
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- personal attributes section start -->
+    
+
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: 'https://jsonplaceholder.typicode.com/posts',
+                method: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    if (data.length > 0) {
+                        var name = "JITENDRA SONI";
+                        var unitNumber = "1234";
+                        var streetNumber = "54321";
+                        var streetName = "";
+                        var suburb = "";
+                        var state = "";
+                        var postcode = "";
+                        var country = "";
+                        var phonea = "";
+                        var phoneb = "";
+                        var mobile = "";
+                        var facsimile = "";
+                        var email = "";
+                        var adviser = "";
+                        var advisercompany = "";
+                        var adviseremail = "";
+                        var afslicence = "";
+                        var afslicencenumber = "";
+
+                        var nameBlocks = $('#nameBlocks');
+                        var unitBlocks = $('#unitBlocks');
+                        var streetBlocks = $('#streetBlocks');
+                        var streetNameBlocks = $('#streetNameBlocks');
+                        var suburbBlocks = $('#suburbBlocks');
+                        var stateBlocks = $('#stateBlocks');
+                        var postcodeBlocks = $('#postcodeBlocks');
+                        var countryBlocks = $('#countryBlocks');
+                        var phoneaBlocks = $('#phoneaBlocks');
+                        var phonebBlocks = $('#phonebBlocks');
+                        var mobileBlocks = $('#mobileBlocks');
+                        var facsimileBlocks = $('#facsimileBlocks');
+                        var emailBlocks = $('#emailBlocks');
+                        var advisernameBlocks = $('#advisernameBlocks');
+                        var advisercompanyBlocks = $('#advisercompanyBlocks');
+                        var adviseremailBlocks = $('#adviseremailBlocks');
+                        var afslicenceBlocks = $('#afslicenceBlocks');
+                        var afslicencenumberBlocks = $('#afslicencenumberBlocks');
+
+                        nameBlocks.empty();
+                        unitBlocks.empty();
+                        streetBlocks.empty();
+                        streetNameBlocks.empty();
+                        suburbBlocks.empty();
+                        stateBlocks.empty();
+                        countryBlocks.empty();
+                        phoneaBlocks.empty();
+                        phonebBlocks.empty();
+                        mobileBlocks.empty();
+                        facsimileBlocks.empty();
+                        emailBlocks.empty();
+                        advisernameBlocks.empty();
+                        advisercompanyBlocks.empty();
+                        adviseremailBlocks.empty();
+                        afslicenceBlocks.empty();
+                        afslicencenumberBlocks.empty();
+
+                        var maxNameBlocks = 30;
+                        var maxUnitBlocks = 4;
+                        var maxStreetBlocks = 5;
+                        var maxStreetNameBlocks = 30;
+                        var maxSuburbBlocks = 60;
+                        var maxStateBlocks = 3;
+                        var maxPostcodeBlocks = 4;
+                        var maxCountryBlocks = 30;
+                        var maxPhoneaBlocks = 10;
+                        var maxPhonebBlocks = 10;
+                        var maxMobileBlocks = 10;
+                        var maxFacsimileBlocks = 10;
+                        var maxEmailBlocks = 30;
+                        var maxAdvisernameBlocks = 30;
+                        var maxAdvisercompanyBlocks = 30;
+                        var maxAdviseremailBlocks = 30;
+                        var maxAfslicenceBlocks = 30;
+                        var maxAfslicencenumberBlocks = 10;
+
+                        var nameContentLength = name.length;
+                        var unitContentLength = unitNumber.length;
+                        var streetContentLength = streetNumber.length;
+                        var streetNameContentLength = streetName.length;
+                        var suburbContentLength = suburb.length;
+                        var stateContentLength = state.length;
+                        var postcodeContentLength = postcode.length;
+                        var countryContentLength = country.length;
+                        var phoneaContentLength = phonea.length;
+                        var phonebContentLength = phoneb.length;
+                        var mobileContentLength = mobile.length;
+                        var facsimileContentLength = facsimile.length;
+                        var emailContentLength = email.length;
+                        var adviserContentLength = adviser.length;
+                        var advisercompanyContentLength = advisercompany.length;
+                        var adviseremailContentLength = adviseremail.length;
+                        var afslicenceContentLength = afslicence.length;
+                        var afslicencenumberContentLength = afslicencenumber.length;
+
+                        if (nameContentLength > maxNameBlocks) {
+                            maxNameBlocks = nameContentLength;
+                        }
+                        if (unitContentLength > maxUnitBlocks) {
+                            maxUnitBlocks = unitContentLength;
+                        }
+                        if (streetContentLength > maxStreetBlocks) {
+                            maxStreetBlocks = streetContentLength;
+                        }
+                        if (streetNameContentLength > maxStreetBlocks) {
+                            maxStreetNameBlocks = streetNameContentLength;
+                        }
+                        if (suburbContentLength > maxSuburbBlocks) {
+                            maxSuburbBlocks = suburbContentLength;
+                        }
+                        if (stateContentLength > maxStateBlocks) {
+                            maxStateBlocks = stateContentLength;
+                        }
+                        if (postcodeContentLength > maxPostcodeBlocks) {
+                            maxPostcodeBlocks = postcodeContentLength;
+                        }
+                        if (countryContentLength > maxCountryBlocks) {
+                            maxCountryBlocks = countryContentLength;
+                        }
+                        if (phoneaContentLength > maxPhoneaBlocks) {
+                            maxPhoneaBlocks = phoneaContentLength;
+                        }
+                        if (phonebContentLength > maxPhonebBlocks) {
+                            maxPhonebBlocks = phonebContentLength;
+                        }
+                        if (mobileContentLength > maxMobileBlocks) {
+                            maxMobileBlocks = mobileContentLength;
+                        }
+                        if (facsimileContentLength > maxFacsimileBlocks) {
+                            maxFacsimileBlocks = facsimileContentLength;
+                        }
+                        if (emailContentLength > maxEmailBlocks) {
+                            maxEmailBlocks = emailContentLength;
+                        }
+                        if (adviserContentLength > maxAdvisernameBlocks) {
+                            maxAdvisernameBlocks = adviserContentLength;
+                        }
+                        if (advisercompanyContentLength > maxAdvisercompanyBlocks) {
+                            maxAdvisercompanyBlocks = advisercompanyContentLength;
+                        }
+                        if (adviseremailContentLength > maxAdviseremailBlocks) {
+                            maxAdviseremailBlocks = adviseremailContentLength;
+                        }
+                        if (afslicenceContentLength > maxAfslicenceBlocks) {
+                            maxafslicenceBlocks = afslicenceContentLength;
+                        }
+                        if (afslicencenumberContentLength > maxAfslicencenumberBlocks) {
+                            maxAfslicencenumberBlocks = afslicencenumberContentLength;
+                        }
+
+                        fillBlocks(name, nameBlocks, maxNameBlocks);
+                        fillBlocks(unitNumber, unitBlocks, maxUnitBlocks);
+                        fillBlocks(streetNumber, streetBlocks, maxStreetBlocks);
+                        fillBlocks(streetName, streetNameBlocks, maxStreetNameBlocks);
+                        fillBlocks(suburb, suburbBlocks, maxSuburbBlocks);
+                        fillBlocks(state, stateBlocks, maxStateBlocks);
+                        fillBlocks(postcode, postcodeBlocks, maxPostcodeBlocks);
+                        fillBlocks(country, countryBlocks, maxCountryBlocks);
+                        fillBlocks(phonea, phoneaBlocks, maxPhoneaBlocks);
+                        fillBlocks(phoneb, phonebBlocks, maxPhonebBlocks);
+                        fillBlocks(mobile, mobileBlocks, maxMobileBlocks);
+                        fillBlocks(facsimile, facsimileBlocks, maxFacsimileBlocks);
+                        fillBlocks(email, emailBlocks, maxEmailBlocks);
+                        fillBlocks(adviser, advisernameBlocks, maxAdvisernameBlocks);
+                        fillBlocks(advisercompany, advisercompanyBlocks, maxAdvisercompanyBlocks);
+                        fillBlocks(adviseremail, adviseremailBlocks, maxAdviseremailBlocks);
+                        fillBlocks(afslicence, afslicenceBlocks, maxAfslicenceBlocks);
+                        fillBlocks(afslicencenumber, afslicencenumberBlocks, maxAfslicencenumberBlocks);
+                    } else {
+                        console.error('No data available.');
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.error('Error:', status, error);
+                }
+            });
+
+            function fillBlocks(data, blocksContainer, maxBlocks) {
+                for (var i = 0; i < maxBlocks; i++) {
+                    var character = i < data.length ? data[i] : '';
+                    var block = $('<div class="block"></div>').text(character);
+                    blocksContainer.append(block);
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
