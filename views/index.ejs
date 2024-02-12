@@ -8,6 +8,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         .fs-5 {
             font-size: 15px !important;
@@ -17,7 +18,124 @@
 
 <body>
     <div class="container">
+        <!-- first page -->
+        <div class="row">
+            <div class="col-md-4">
+                <div>
+                    <h3>Application Form</h3>
+                    <h3>Incentivise Investment Fund</h3>
+                </div>
+                <div class="col-md-4"></div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+        <div class="col-md-12 mt-1">
+            <div>PLEASE USE BLOCK LETTERS AND BLACK INK TO COMPLETE THIS APPLICATION FORM</div>
+        </div>
+
         <div class="w-100">
+            <div class="border border-dark p-1">1. Investment details</div>
+            <div class="mt-3">Is this a new investment or an additional investment?</div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2">
+                <div class="d-flex align-items-center gap-2">
+                    <input type="checkbox">New investment   
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div class="fs-5"><i class="fa-solid fa-angle-right"></i> Please proceed to section 2.</div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2">
+                <div class="d-flex align-items-center gap-2">
+                    <input type="checkbox">Additional investment   
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="fs-5"><i class="fa-solid fa-angle-right"></i> Existing account name</div>
+            </div>
+                <div class="col-md-8">
+                    <div class="d-flex flex-wrap align-items-center gap-1" id="existinaccountnameBlocks"></div>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-2"></div>
+            <div class="col-md-2">
+                <div class="fs-5">Existing account number</div>
+            </div>
+                <div class="col-md-8">
+                    <div class="d-flex flex-wrap align-items-center gap-1" id="existinaccountnumberBlocks"></div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">Please proceed to section 6. If you provide any information in any other section, this will override any previous
+                information provided.</div>
+            <div class="col-md-2"></div>
+        </div>
+
+        <div class="w-100">
+            <div class="border border-dark p-1">2. Investor type</div>
+            <div class="row mt-2">
+                <div class="col-md-10">
+                    <div class="d-flex align-items-center gap-2">
+                        <input type="checkbox">Individual investor or joint investors – also complete ‘Customer Identification Form – Individuals and Sole Traders’
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <input type="checkbox">Sole Trader – also complete ‘Customer Identification Form – Individuals and Sole Traders’
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <input type="checkbox">Super Fund – also complete ‘Customer Identification Form – Superannuation Funds and Trusts’
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <input type="checkbox">Trust – also complete ‘Customer Identification Form – Unregulated Trusts and Trustees’
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <input type="checkbox">Australian company – also complete ‘Customer Identification Form – Australian Companies’
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <input type="checkbox">Foreign company – also complete 'Customer Identification Form – Foreign Companies'
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <input type="checkbox">Other – contact the Administration Manager on +61 3 8352 7120 for other Customer Identification Forms.
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        Each of the above forms is available at www.vascofm.com
+                    </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+
+        <div class="w-100">
+            <div class="border border-dark p-1 mt-1">3. Investor name</div>
+        </div>
+
+        <div class="w-100 mt-3">
+            <div class="row">
+                <div class="col-md-2"></div>    
+                <div class="col-md-10 border border-dark p-1">5a. Individual investor or entity</div>
+                <div class="fw-bold">Investor 1</div>
+            </div>
+        </div>
+
+        <!-- <div class="col-md-3">
+                <div class="d-flex align-items-center gap-2">
+                    <div>
+                        <input type="checkbox"> Yes
+                    </div>
+                    <div>
+                        <input type="checkbox"> No
+                    </div>
+                </div>
+            </div> -->
+
+        <!-- Secund Page -->
+        <div class="w-100 mt-3">
             <div class="border border-dark p-1">4. Contact details</div>
             <div class="mt-3">This is the Investor's address where all correspondence will be sent.</div>
         </div>
@@ -403,6 +521,159 @@
                     product may not be suitable for you.</div>
             </div>
         </div>
+        <div class="row mt-2">
+            <div class="col-md-2">
+                <div class="d-flex justify-content-between">
+                    <div>&nbsp;</div>
+                    <div class="text-info fw-bold fs-5">Risk Profile</div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div><span class="fw-bold">Explanation:</span> The following question will assist us in determining your risk profile. In this context “growth assets” include assets
+                    such as shares, property, and alternative investments. Defensive assets may include cash or fixed income investments.</div>
+                    <div>What is your risk appetite? </div>
+                    <div>Please select the option which is most fits your intentions with respect to your investment in the Fund.</div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div><span class="fw-bold">Very High </span>- I am an aggressive investor seeking to achieve returns significantly higher than the
+                    market average and as a result accept this means returns may be volatile with a higher potential that
+                    I may experience the loss of some or all my capital. I have a tolerance for sustained losses. My typical
+                    preference is for growth assets only.</div>
+            </div>
+            <div class="col-md-2">
+                <div class="d-flex align-items-center gap-2">
+                    <div>
+                        <input type="checkbox"> Yes
+                    </div>
+                    <div>
+                        <input type="checkbox"> No
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div><span class="fw-bold">High </span>– I am a moderately aggressive investor seeking above market average returns and as a result I
+                    accept this means returns may be volatile and there is some potential that I may experience loss of
+                    some or all of my capital. I have a stronger preference for growth assets with smaller or moderate
+                    holding in defensive assets. Any investment in the Fund would represent only a small proportion of
+                    my investable assets.</div>
+            </div>
+            <div class="col-md-2">
+                <div class="d-flex align-items-center gap-2">
+                    <div>
+                        <input type="checkbox"> Yes
+                    </div>
+                    <div>
+                        <input type="checkbox"> No
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div><span class="fw-bold">Medium </span> – I am seeking to achieve market average returns and seeking to minimise potential losses
+                    of capital. I have a preference for balance between growth assets and defensive assets.</div>
+            </div>
+            <div class="col-md-2">
+                <div class="d-flex align-items-center gap-2">
+                    <div>
+                        <input type="checkbox"> Yes
+                    </div>
+                    <div>
+                        <input type="checkbox"> No
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div><span class="fw-bold">Low </span> –  I am risk averse and willing to accept below market average returns in return for preservation
+                    of capital. I do not have a tolerance for loss. I have a preference for defensive assets only.</div>
+            </div>
+            <div class="col-md-2">
+                <div class="d-flex align-items-center gap-2">
+                    <div>
+                        <input type="checkbox"> Yes
+                    </div>
+                    <div>
+                        <input type="checkbox"> No
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div><span class="fw-bold">Note: </span>The Fund has a High to Very High risk profile. If you consider yourself to have a ‘Medium’ or ‘Low’
+                    risk profile per above, then this product is not suitable for you.</div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2">
+                <div class="d-flex justify-content-between">
+                    <div>&nbsp;</div>
+                    <div class="text-info fw-bold fs-5">Withdrawals</div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div>The Fund is considered an illiquid investment and expects to only make an offer withdrawal
+                    offer on an annual basis after the expiring of the Minimum Investment Term. Do you accept this?</div>
+            </div>
+            <div class="col-md-2">
+                <div class="d-flex align-items-center gap-2">
+                    <div>
+                        <input type="checkbox"> Yes
+                    </div>
+                    <div>
+                        <input type="checkbox"> No
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2"></div>
+            <div class="col-md-10">
+                <div><span class="fw-bold">Note: </span>Given the Fund has a Minimum Investment Term, investors with a need to withdraw and have access to their funds prior
+                    to the expiry of the Minimum Investment Term are not considered to be within the target market. If you selected “No”, then this
+                    product is not suitable for you.</div>
+            </div>
+        </div>
+
+        <div class="w-100 mt-3">
+            <div class="border border-dark p-1">6. Tax information</div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2"></div>
+            <div class="col-md-10">
+                <div>It is not against the law if you choose not to give your TFN or exemption reason, but if you decide not to, tax may be
+                    taken out of your distributions at the highest marginal tax rate (plus Medicare levy).</div>
+            </div>
+        </div>
+
+        <div class="w-100 mt-3">
+            <div class="row">
+                <div class="col-md-2"></div>    
+                <div class="col-md-5 border border-dark p-1">5a. Individual investor or entity</div>
+                <div class="col-md-5 border border-dark p-1">5b. Investor 2 (joint investors)</div>
+            </div>
+        </div>
+        
     </div>
 
     <script>
@@ -413,6 +684,8 @@
                 dataType: 'json',
                 success: function (data) {
                     if (data.length > 0) {
+                        var existinaccountname = "";
+                        var existinaccountnumber = "";
                         var name = "JITENDRA SONI";
                         var unitNumber = "1234";
                         var streetNumber = "54321";
@@ -431,7 +704,10 @@
                         var adviseremail = "";
                         var afslicence = "";
                         var afslicencenumber = "";
+                        
 
+                        var existinaccountnameBlocks = $('#existinaccountnameBlocks');
+                        var existinaccountnumberBlocks = $('#existinaccountnumberBlocks');
                         var nameBlocks = $('#nameBlocks');
                         var unitBlocks = $('#unitBlocks');
                         var streetBlocks = $('#streetBlocks');
@@ -450,7 +726,10 @@
                         var adviseremailBlocks = $('#adviseremailBlocks');
                         var afslicenceBlocks = $('#afslicenceBlocks');
                         var afslicencenumberBlocks = $('#afslicencenumberBlocks');
+                        
 
+                        existinaccountnameBlocks.empty();
+                        existinaccountnumberBlocks.empty();
                         nameBlocks.empty();
                         unitBlocks.empty();
                         streetBlocks.empty();
@@ -468,7 +747,10 @@
                         adviseremailBlocks.empty();
                         afslicenceBlocks.empty();
                         afslicencenumberBlocks.empty();
+                        
 
+                        var maxExistinaccountnameBlocks = 46;
+                        var maxExistinaccountnumberBlocks = 9;
                         var maxNameBlocks = 30;
                         var maxUnitBlocks = 4;
                         var maxStreetBlocks = 5;
@@ -487,7 +769,10 @@
                         var maxAdviseremailBlocks = 30;
                         var maxAfslicenceBlocks = 30;
                         var maxAfslicencenumberBlocks = 10;
+                        
 
+                        var existinaccountnameContentLength = existinaccountname.length;
+                        var existinaccountnumberContentLength = existinaccountnumber.length;
                         var nameContentLength = name.length;
                         var unitContentLength = unitNumber.length;
                         var streetContentLength = streetNumber.length;
@@ -506,7 +791,14 @@
                         var adviseremailContentLength = adviseremail.length;
                         var afslicenceContentLength = afslicence.length;
                         var afslicencenumberContentLength = afslicencenumber.length;
+                        
 
+                        if (existinaccountnameContentLength > maxExistinaccountnameBlocks) {
+                            maxExistinaccountnameBlocks = existinaccountnameContentLength;
+                        }
+                        if (existinaccountnumberContentLength > maxExistinaccountnumberBlocks) {
+                            maxExistinaccountnumberBlocks = existinaccountnumberContentLength;
+                        }
                         if (nameContentLength > maxNameBlocks) {
                             maxNameBlocks = nameContentLength;
                         }
@@ -561,7 +853,10 @@
                         if (afslicencenumberContentLength > maxAfslicencenumberBlocks) {
                             maxAfslicencenumberBlocks = afslicencenumberContentLength;
                         }
-
+                        
+                        
+                        fillBlocks(existinaccountname, existinaccountnameBlocks, maxExistinaccountnameBlocks);
+                        fillBlocks(existinaccountnumber, existinaccountnumberBlocks, maxExistinaccountnumberBlocks);
                         fillBlocks(name, nameBlocks, maxNameBlocks);
                         fillBlocks(unitNumber, unitBlocks, maxUnitBlocks);
                         fillBlocks(streetNumber, streetBlocks, maxStreetBlocks);
@@ -579,7 +874,7 @@
                         fillBlocks(advisercompany, advisercompanyBlocks, maxAdvisercompanyBlocks);
                         fillBlocks(adviseremail, adviseremailBlocks, maxAdviseremailBlocks);
                         fillBlocks(afslicence, afslicenceBlocks, maxAfslicenceBlocks);
-                        fillBlocks(afslicencenumber, afslicencenumberBlocks, maxAfslicencenumberBlocks);
+                        
                     } else {
                         console.error('No data available.');
                     }
