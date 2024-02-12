@@ -118,10 +118,152 @@
         <div class="w-100 mt-3">
             <div class="row">
                 <div class="col-md-2"></div>    
-                <div class="col-md-10 border border-dark p-1">5a. Individual investor or entity</div>
+                <div class="col-md-10 text-info fw-bold border border-dark p-1">3A. Individual investor/joint investors/sole trader</div>
                 <div class="fw-bold">Investor 1</div>
             </div>
         </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2">
+                <div class="d-flex justify-content-between">
+                    <div>&nbsp;</div>
+                    <div>Surname</div>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div class="d-flex flex-wrap align-items-center gap-1" id="surnameBlocks"></div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2">
+                <div class="d-flex justify-content-between">
+                    <div>&nbsp;</div>
+                    <div>Full given name(s)</div>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div class="d-flex flex-wrap align-items-center gap-1" id="fullnameBlocks"></div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2">
+                <div class="d-flex justify-content-between">
+                    <div>&nbsp;</div>
+                    <div>Title (Mr/Mrs/Miss/Ms)</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="d-flex flex-wrap align-items-center gap-1" id="titleBlocks"></div>
+            </div>
+            <div class="col-md-2">
+                <div class="d-flex justify-content-between">
+                    <div>&nbsp;</div>
+                    <div>Date of birth</div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="d-flex flex-wrap align-items-center gap-1" id="dateofbirthBlocks"></div>
+            </div>
+        </div>
+
+        <div class="row mt-2" style=" align-items: end;">
+            <div class="col-md-2">
+                <div class="d-flex justify-content-between">
+                    <div>Business name of sole trader (if applicable)</div>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div class="d-flex flex-wrap align-items-center gap-1" id="businessnameBlocks"></div>
+            </div>
+        </div>
+        <!-- Invester 2 -->
+        <div class="w-100 mt-3">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="fw-bold">Investor 2</div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2">
+                <div class="d-flex justify-content-between">
+                    <div>&nbsp;</div>
+                    <div>Surname</div>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div class="d-flex flex-wrap align-items-center gap-1" id="surnametwoBlocks"></div>
+            </div>
+        </div>
+        
+        <div class="row mt-2">
+            <div class="col-md-2">
+                <div class="d-flex justify-content-between">
+                    <div>&nbsp;</div>
+                    <div>Full given name(s)</div>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div class="d-flex flex-wrap align-items-center gap-1" id="fullnametwoBlocks"></div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2">
+                <div class="d-flex justify-content-between">
+                    <div>&nbsp;</div>
+                    <div>Title (Mr/Mrs/Miss/Ms)</div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="d-flex flex-wrap align-items-center gap-1" id="titletwoBlocks"></div>
+            </div>
+            <div class="col-md-2">
+                <div class="d-flex justify-content-between">
+                    <div>&nbsp;</div>
+                    <div>Date of birth</div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="d-flex flex-wrap align-items-center gap-1" id="dateofbirthtwoBlocks"></div>
+            </div>
+        </div>
+
+        <div class="w-100 mt-3">
+            <div class="row">
+                <div class="col-md-2"></div>    
+                <div class="col-md-10 text-info fw-bold border border-dark p-1">3B. Super fund/Trust/Australian company/foreign company/other</div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-md-2">
+                <div class="d-flex justify-content-between">
+                    <div>&nbsp;</div>
+                    <div>Name of entity</div>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div class="d-flex flex-wrap align-items-center gap-1" id="nameofentityBlocks"></div>
+            </div>
+        </div>
+
+        <div class="w-100 mt-3">
+            <div class="row">
+                <div class="col-md-2"></div>    
+                <div class="col-md-10 text-info fw-bold border border-dark p-1">3C. Account designation (if applicable)</div>
+            </div>
+        </div>
+        <div class="w-100 mt-3">
+            <div class="row">
+                <div class="col-md-2"></div>    
+                <div class="col-md-10 p-1">Provide the name of the person for whom the investment is being made (if applicable). Please note we do not accept
+                    investments from people under 18 years of age; however, investments may be designated on their behalf.</div>
+            </div>
+        </div>
+
 
         <!-- <div class="col-md-3">
                 <div class="d-flex align-items-center gap-2">
@@ -704,6 +846,16 @@
                         var adviseremail = "";
                         var afslicence = "";
                         var afslicencenumber = "";
+                        var surname = "";
+                        var fullname = "";
+                        var title = "";
+                        var dateofbirth = "";
+                        var businessname = "";
+                        var surnametwo = "";
+                        var fullnametwo = "";
+                        var titletwo = "";
+                        var dateofbirthtwo = "";
+                        var nameofentity = "";
                         
 
                         var existinaccountnameBlocks = $('#existinaccountnameBlocks');
@@ -726,6 +878,16 @@
                         var adviseremailBlocks = $('#adviseremailBlocks');
                         var afslicenceBlocks = $('#afslicenceBlocks');
                         var afslicencenumberBlocks = $('#afslicencenumberBlocks');
+                        var surnameBlocks = $('#surnameBlocks');
+                        var fullnameBlocks = $('#fullnameBlocks');
+                        var titleBlocks = $('#titleBlocks');
+                        var dateofbirthBlocks = $('#dateofbirthBlocks');
+                        var businessnameBlocks = $('#businessnameBlocks');
+                        var surnametwoBlocks = $('#surnametwoBlocks');
+                        var fullnametwoBlocks = $('#fullnametwoBlocks');
+                        var titletwoBlocks = $('#titletwoBlocks');
+                        var dateofbirthtwoBlocks = $('#dateofbirthtwoBlocks');
+                        var nameofentityBlocks = $('#nameofentityBlocks');
                         
 
                         existinaccountnameBlocks.empty();
@@ -747,6 +909,16 @@
                         adviseremailBlocks.empty();
                         afslicenceBlocks.empty();
                         afslicencenumberBlocks.empty();
+                        surnameBlocks.empty();
+                        fullnameBlocks.empty();
+                        titleBlocks.empty();
+                        dateofbirthBlocks.empty();
+                        businessnameBlocks.empty();
+                        surnametwoBlocks.empty();
+                        fullnametwoBlocks.empty();
+                        titletwoBlocks.empty();
+                        dateofbirthtwoBlocks.empty();
+                        nameofentityBlocks.empty();
                         
 
                         var maxExistinaccountnameBlocks = 46;
@@ -769,6 +941,17 @@
                         var maxAdviseremailBlocks = 30;
                         var maxAfslicenceBlocks = 30;
                         var maxAfslicencenumberBlocks = 10;
+                        var maxAfslicencenumberBlocks = 10;
+                        var maxSurnameBlocks = 30;
+                        var maxFullnameBlocks = 30;
+                        var maxTitleBlocks = 4;
+                        var maxDateofbirthBlocks = 8;
+                        var maxBusinessnameBlocks = 30;
+                        var maxSurnametwoBlocks = 30;
+                        var maxFullnametwoBlocks = 30;
+                        var maxTitletwoBlocks = 4;
+                        var maxDateofbirthtwoBlocks = 8;
+                        var maxNameofentityBlocks = 60;
                         
 
                         var existinaccountnameContentLength = existinaccountname.length;
@@ -791,6 +974,16 @@
                         var adviseremailContentLength = adviseremail.length;
                         var afslicenceContentLength = afslicence.length;
                         var afslicencenumberContentLength = afslicencenumber.length;
+                        var surnameContentLength = surname.length;
+                        var fullnameContentLength = fullname.length;
+                        var titleContentLength = title.length;
+                        var dateofbirthContentLength = dateofbirth.length;
+                        var businessnameContentLength = dateofbirth.length;
+                        var surnametwoContentLength = surnametwo.length;
+                        var fullnametwoContentLength = fullnametwo.length;
+                        var titletwoContentLength = titletwo.length;
+                        var dateofbirthtwoContentLength = dateofbirthtwo.length;
+                        var nameofentityContentLength = nameofentity.length;
                         
 
                         if (existinaccountnameContentLength > maxExistinaccountnameBlocks) {
@@ -853,6 +1046,38 @@
                         if (afslicencenumberContentLength > maxAfslicencenumberBlocks) {
                             maxAfslicencenumberBlocks = afslicencenumberContentLength;
                         }
+                        if (surnameContentLength > maxSurnameBlocks) {
+                            maxSurnameBlocks = surnameContentLength;
+                        }
+                        
+                        if (fullnameContentLength > maxFullnameBlocks) {
+                            maxFullnameBlocks = fullnameContentLength;
+                        }
+                        if (titleContentLength > maxTitleBlocks) {
+                            maxTitleBlocks = titleContentLength;
+                        }
+                        if (dateofbirthContentLength > maxDateofbirthBlocks) {
+                            maxDateofbirthBlocks = dateofbirthContentLength;
+                        }
+                        if (businessnameContentLength > maxBusinessnameBlocks) {
+                            maxBusinessnameBlocks = businessnameContentLength;
+                        }
+                        if (surnametwoContentLength > maxSurnametwoBlocks) {
+                            maxSurnametwoBlocks = surnametwoContentLength;
+                        }
+                        
+                        if (fullnametwoContentLength > maxFullnametwoBlocks) {
+                            maxFullnametwoBlocks = fullnametwoContentLength;
+                        }
+                        if (titletwoContentLength > maxTitletwoBlocks) {
+                            maxTitletwoBlocks = titletwoContentLength;
+                        }
+                        if (dateofbirthtwoContentLength > maxDateofbirthtwoBlocks) {
+                            maxDateofbirthtwoBlocks = dateofbirthtwoContentLength;
+                        }
+                        if (nameofentityContentLength > maxNameofentityBlocks) {
+                            maxNameofentityBlocks = nameofentityContentLength;
+                        }
                         
                         
                         fillBlocks(existinaccountname, existinaccountnameBlocks, maxExistinaccountnameBlocks);
@@ -874,6 +1099,17 @@
                         fillBlocks(advisercompany, advisercompanyBlocks, maxAdvisercompanyBlocks);
                         fillBlocks(adviseremail, adviseremailBlocks, maxAdviseremailBlocks);
                         fillBlocks(afslicence, afslicenceBlocks, maxAfslicenceBlocks);
+                        fillBlocks(surname, surnameBlocks, maxSurnameBlocks);
+                        fillBlocks(fullname, fullnameBlocks, maxFullnameBlocks);
+                        fillBlocks(title, titleBlocks, maxTitleBlocks);
+                        fillBlocks(dateofbirth, dateofbirthBlocks, maxDateofbirthBlocks);
+                        fillBlocks(businessname, businessnameBlocks, maxBusinessnameBlocks);
+                        fillBlocks(surnametwo, surnametwoBlocks, maxSurnametwoBlocks);
+                        fillBlocks(fullnametwo, fullnametwoBlocks, maxFullnametwoBlocks);
+                        fillBlocks(titletwo, titletwoBlocks, maxTitletwoBlocks);
+                        fillBlocks(dateofbirthtwo, dateofbirthtwoBlocks, maxDateofbirthtwoBlocks);
+                        fillBlocks(nameofentity, nameofentityBlocks, maxNameofentityBlocks);
+
                         
                     } else {
                         console.error('No data available.');
